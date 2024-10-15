@@ -13,7 +13,7 @@
   </head>
   <body>
   <script type="module" slot="url_for('static','hello.js')"></script>
-
+{{person}}
   </body>
 </html>
 <!-- <script type="module">
@@ -32,20 +32,21 @@
   renderer.setAnimationLoop(animate);
   document.body.appendChild(renderer.domElement);
 
-  const geometry = new THREE.;
+  const geometry = new THREE.SphereGeometry();
   const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
   const cube = new THREE.Mesh(geometry, material);
+  const texture = new THREE.TextureLoader().load("url_for('static','./image.jpg') ");
   scene.add(cube);
 
   camera.position.z = 5;
   var mouseTolerance = 0.01;
 
 document.onmousemove = function (e) {
-  var centerX = window.innerWidth * 0.5;
-  var centerY = window.innerHeight * 0.5;
+  // var centerX = window.innerWidth * 0.5;
+  // var centerY = window.innerHeight * 0.5;
 
-  camera.position.x = (e.clientX - centerX) * mouseTolerance;
-  camera.position.y = -1*(e.clientY - centerY) * mouseTolerance;
+  // camera.position.x = (e.clientX - centerX) * mouseTolerance;
+  // camera.position.y = -1*(e.clientY - centerY) * mouseTolerance;
 };
 
   function animate() {
