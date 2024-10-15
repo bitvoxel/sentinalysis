@@ -1,0 +1,13 @@
+canvas{
+    margin: 0;
+    padding: 0;
+    width: 100lvw;
+    height: 100lvh;
+
+}
+
+html,body{
+    margin:0;
+    padding:0;
+    background:red;
+}
