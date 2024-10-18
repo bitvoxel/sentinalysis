@@ -16,7 +16,7 @@
 {{person}}
   </body>
 </html>
-<!-- <script type="module">
+<script type="module">
   import * as THREE from "three";
   import { CSS3DRenderer } from 'three/addons/renderers/CSS3DRenderer.js';
 
@@ -32,8 +32,8 @@
   renderer.setAnimationLoop(animate);
   document.body.appendChild(renderer.domElement);
 
-  const geometry = new THREE.SphereGeometry();
-  const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+  const geometry = new THREE.BoxGeometry();
+  const material = new THREE.MeshBasicMaterial({ color: 0x00faaa0 });
   const cube = new THREE.Mesh(geometry, material);
   const texture = new THREE.TextureLoader().load("url_for('static','./image.jpg') ");
   scene.add(cube);
@@ -54,8 +54,10 @@ document.onmousemove = function (e) {
     camera.aspect = window.innerWidth/ window.innerHeight
     camera.updateProjectionMatrix()
     renderer.render(scene, camera);
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
   }
-</script> -->
+</script>
 
 <style>
     canvas{
